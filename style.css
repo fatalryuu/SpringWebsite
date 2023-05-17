@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#icon {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    color: #66ad36;
+}
+
+.header__logo {
+    width: 45px;
+}
+
+.spring__text {
+    margin-left: 10px;
+    padding-bottom: 10px;
+    font-family: "Futura Md BT", sans-serif;
+    font-size: 44px;
+}
+
+.by__spring__text {
+    font-family: "Futura Bk BT", sans-serif;
+    padding-top: 20px;
+}
+
+#navbar {
+    margin-left: auto;
+    width: 1044px;
+}
+
+.nav__list {
+    display: flex;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    list-style: none;
+}
+
+.nav__list li {
+    margin-right: 30px;
+}
+
+.nav__list li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav__list li::after {
+    content: "";
+    margin-left: 10px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+}
