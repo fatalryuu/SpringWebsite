@@ -3,10 +3,13 @@
     padding: 0;
 }
 
+/*header section*/
+
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #ebf2f2;
 }
 
 #icon {
@@ -41,7 +44,7 @@
 .nav__list {
     display: flex;
     font-family: sans-serif;
-    font-size: 15px;
+    font-size: .95rem;
     font-weight: 600;
     list-style: none;
 }
@@ -51,10 +54,10 @@
 }
 
 .nav__list li {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
+     position: relative;
+     display: flex;
+     align-items: center;
+ }
 
 .nav__list li::after {
     content: "";
@@ -64,4 +67,38 @@
     display: inline-block;
     padding: 3px;
     transform: rotate(45deg);
+}
+
+/*projects section*/
+
+#projects {
+
+}
+
+.container {
+
+}
+
+.projects__header {
+    width: 1350px;
+    margin: 0 auto;
+}
+
+.projects__header h1 {
+    margin-top: 88px;
+    font-size: 3.5rem;
+    font-family: sans-serif;
+}
+
+.description {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+    margin-top: 20px;
+    max-width: 920px;
+}
+
+.project__list {
+    list-style: none;
 }
