@@ -39,7 +39,13 @@
 
 #navbar {
     margin-left: auto;
-    width: 690px;
+    width: 55%;
+}
+
+@media screen and (max-width: 1259px) {
+    #navbar {
+        width: 690px;
+    }
 }
 
 .nav__list {
