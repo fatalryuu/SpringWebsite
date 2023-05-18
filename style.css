@@ -81,7 +81,9 @@
     display: none;
     position: absolute;
     background-color: #f8f8f8;
+    padding: 16px;
     min-width: 160px;
+    box-shadow: 0 7px 10px 7px rgba(108, 135, 135, 0.24);
 }
 
 .dropdown:hover .dropdown__content {
@@ -89,20 +91,22 @@
 }
 
 .dropdown__content a {
-    font-family: "Futura Bk BT", sans-serif;
+    font-family: "Open Sans", sans-serif;
     color: black;
-    padding: 12px 16px;
+    padding: 8px 16px;
     text-decoration: none;
     display: block;
 }
 
 #blue {
     color: cornflowerblue;
+    padding-bottom: 35px;
 }
 
 .projects__text__tools {
+    display: block;
     text-transform: uppercase;
-    padding: 12px 16px;
+    padding: 8px 16px;
     font-size: .75rem;
 }
 
