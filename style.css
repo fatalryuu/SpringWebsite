@@ -44,20 +44,18 @@
 
 .nav__list {
     display: flex;
-    font-family: sans-serif;
-    font-weight: 600;
-    list-style: none;
 }
 
-.nav__list li {
+.dropdown__button {
     position: relative;
     display: flex;
     align-items: center;
-    margin-right: 30px;
+    font-family: sans-serif;
+    font-weight: 600;
     font-size: .95rem;
 }
 
-.nav__list li::after {
+.dropdown__button::after {
     content: "";
     margin-left: 10px;
     border: solid black;
@@ -65,6 +63,51 @@
     display: inline-block;
     padding: 3px;
     transform: rotate(45deg);
+}
+
+/*dropdown*/
+
+.dropdown {
+
+}
+
+.dropdown__button {
+    border: none;
+    padding: 10px 15px;
+    cursor: text;
+}
+
+.dropdown__content {
+    display: none;
+    position: absolute;
+    background-color: #f8f8f8;
+    min-width: 160px;
+}
+
+.dropdown:hover .dropdown__content {
+    display: block;
+}
+
+.dropdown__content a {
+    font-family: "Futura Bk BT", sans-serif;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#blue {
+    color: cornflowerblue;
+}
+
+.projects__text__tools {
+    text-transform: uppercase;
+    padding: 12px 16px;
+    font-size: .75rem;
+}
+
+.dropdown__content a:hover, #blue:hover {
+    color: #66ad36;
 }
 
 /*projects section*/
