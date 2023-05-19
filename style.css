@@ -168,6 +168,22 @@ html, body {
     font-family: "Humanst521 Lt BT", sans-serif;
 }
 
+.scrollbar {
+    width: 8px;
+    background-color: #ccc;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.show-scrollbar .scrollbar {
+    opacity: 1;
+}
+
 /*projects section*/
 
 #projects {
@@ -316,11 +332,13 @@ html, body {
 
     #navbar {
         display: none;
-        height: 100vh;
+        height: 100%;
         top: 0;
         width: 100%;
         padding-top: 50px;
         background-color: #191e1e;
+        overflow-y: auto;
+        position: fixed;
     }
 
     .dropdown {
@@ -356,15 +374,19 @@ html, body {
         display: none;
         position: static;
         background-color: #191e1e;
-        padding: 16px 16px 5px 16px;
+        padding: 16px 16px 5px 0;
         box-shadow: none;
-        margin-left: 25px;
+        margin-left: 8%;
     }
 
     .dropdown__content a {
         color: #98afae;
         font-size: 1.2rem;
-        padding: 7px 16px;
+        padding: 7px 16px 7px 0;
+    }
+
+    .dropdown:last-child {
+        padding-bottom: 80px;
     }
 
     #blue {
@@ -372,6 +394,8 @@ html, body {
     }
 
     .projects__text__tools {
+        padding-left: 0;
+        font-size: 1.2rem;
         color: #98afae;
     }
 
@@ -445,9 +469,15 @@ html, body {
     }
 }
 
+@media screen and (max-width: 575px) {
+    #icon {
+        margin-left: 10px;
+    }
+}
+
 @media screen and (max-width: 400px) {
     #icon {
-        margin-left: 0;
+        margin-left: 10px;
     }
 
     .projects__table a {

@@ -20,3 +20,15 @@ buttons.forEach((button, i) => button.addEventListener("click", () => {
         button.classList.remove("up");
     }
 }));
+
+window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    const scrollbar = document.getElementById('scrollbar');
+    const isNavbarOverflowing = navbar.scrollHeight > navbar.clientHeight;
+
+    if (isNavbarOverflowing) {
+        scrollbar.classList.add('show-scrollbar');
+    } else {
+        scrollbar.classList.remove('show-scrollbar');
+    }
+});
