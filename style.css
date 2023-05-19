@@ -42,12 +42,6 @@
     width: 55%;
 }
 
-@media screen and (max-width: 1259px) {
-    #navbar {
-        width: 690px;
-    }
-}
-
 .nav__list {
     display: flex;
 }
@@ -216,4 +210,22 @@
     padding: 12px 0 12px 0;
     width: 97%;
     word-wrap: normal;
+}
+
+@media screen and (max-width: 1259px) {
+    #navbar {
+        width: 690px;
+    }
+    .projects__header h1 {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    .projects__table {
+        max-width: 870px;
+    }
 }
