@@ -85,7 +85,7 @@
 .dropdown__content {
     display: none;
     position: absolute;
-    background-color: #f8f8f8;
+    background-color: white;
     padding: 16px;
     min-width: 160px;
     box-shadow: 0 7px 10px 7px rgba(108, 135, 135, 0.24);
@@ -168,13 +168,13 @@
 }
 
 .projects__table article {
-    background-color: white;
+    background-color: #ebf2f2;
     width: 47%;
     padding: 12px;
 }
 
 .projects__table article a:hover {
-    box-shadow: 0 7px 10px 7px rgba(108, 135, 135, 0.24);
+    box-shadow: 0 7px 10px 7px rgba(108, 135, 135, 0.14);
     margin-bottom: 5px;
     margin-top: -5px;
     transition: ease 0.2s;
@@ -186,6 +186,8 @@
 
 .projects__table a {
     border: 1px solid #d8f1ff;
+    border-radius: 5px;
+    background-color: white;
     padding: 30px 0 10px 20px;
     width: auto;
     height: auto;
