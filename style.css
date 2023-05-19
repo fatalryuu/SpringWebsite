@@ -113,6 +113,8 @@
     color: #66ad36;
 }
 
+
+
 /*projects section*/
 
 #projects {
@@ -143,6 +145,7 @@
     line-height: 2.2rem;
     margin-top: 20px;
     max-width: 920px;
+    word-wrap: normal;
 }
 
 .projects__list {
@@ -223,9 +226,32 @@
     .description {
         font-size: 1.2rem;
         line-height: 1.8rem;
+        width: 90%;
     }
 
     .projects__table {
         max-width: 870px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #header {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 0) and (max-width: 850px) {
+    .description {
+        width: 80%;
+    }
+
+    .projects__table {
+        width: 100%;
+    }
+
+    .projects__table article {
+        width: 47%;
+        padding: 10px;
     }
 }
