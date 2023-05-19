@@ -9,85 +9,84 @@
 </head>
 <body>
 <header id="header">
-  <a href="#" id="icon">
-    <img src="img/spring_icon.svg" alt="" class="header__logo">
-    <span class="spring__text">spring</span>
-    <span class="by__spring__text">by VMware Tanzu</span>
-  </a>
-  <nav id="navbar">
-    <div class="nav__list">
-      <div class="dropdown">
-        <span class="dropdown__button">Why Spring</span>
-        <div class="dropdown__content">
-          <a href="#">Overview</a>
-          <a href="#">Microservices</a>
-          <a href="#">Reactive</a>
-          <a href="#">Event Driven</a>
-          <a href="#">Cloud</a>
-          <a href="#">Web Applications</a>
-          <a href="#">Serverless</a>
-          <a href="#">Batch</a>
+  <div class="header__container">
+    <a href="#" id="icon">
+      <img src="img/spring_icon.svg" alt="" class="header__logo">
+      <span class="spring__text">spring</span>
+      <span class="by__spring__text">by VMware Tanzu</span>
+    </a>
+    <input type="checkbox" id="burger">
+    <label for="burger"></label>
+    <nav id="navbar">
+      <div class="nav__list">
+        <div class="dropdown">
+          <span class="dropdown__button">Why Spring</span>
+          <div class="dropdown__content">
+            <a href="#">Overview</a>
+            <a href="#">Microservices</a>
+            <a href="#">Reactive</a>
+            <a href="#">Event Driven</a>
+            <a href="#">Cloud</a>
+            <a href="#">Web Applications</a>
+            <a href="#">Serverless</a>
+            <a href="#">Batch</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <span class="dropdown__button">Learn</span>
+          <div class="dropdown__content">
+            <a href="#">Overview</a>
+            <a href="#">Quickstart</a>
+            <a href="#">Guides</a>
+            <a href="#">Block</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <span class="dropdown__button">Projects</span>
+          <div class="dropdown__content">
+            <a href="#">Overview</a>
+            <a href="#">Spring Boot</a>
+            <a href="#">Spring Framework</a>
+            <a href="#">Spring Cloud</a>
+            <a href="#">Spring Cloud Data Flow</a>
+            <a href="#">Spring Data</a>
+            <a href="#">Spring Integration</a>
+            <a href="#">Spring Batch</a>
+            <a href="#">Spring Security</a>
+            <a href="#" id="blue">View all projects</a>
+            <span class="projects__text__tools">Development tools</span>
+            <a href="#">Spring Tools4</a>
+            <a href="#">Spring Initializr</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <span class="dropdown__button">Academy</span>
+          <div class="dropdown__content">
+            <a href="#">Courses</a>
+            <a href="#">Get Certified</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <span class="dropdown__button">Support</span>
+          <div class="dropdown__content">
+            <a href="#">Overview</a>
+            <a href="#">Security Advisories</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <span class="dropdown__button">Community</span>
+          <div class="dropdown__content">
+            <a href="#">Overview</a>
+            <a href="#">Events</a>
+            <a href="#">Team</a>
+          </div>
         </div>
       </div>
-      <div class="dropdown">
-        <span class="dropdown__button">Learn</span>
-        <div class="dropdown__content">
-          <a href="#">Overview</a>
-          <a href="#">Quickstart</a>
-          <a href="#">Guides</a>
-          <a href="#">Block</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <span class="dropdown__button">Projects</span>
-        <div class="dropdown__content">
-          <a href="#">Overview</a>
-          <a href="#">Spring Boot</a>
-          <a href="#">Spring Framework</a>
-          <a href="#">Spring Cloud</a>
-          <a href="#">Spring Cloud Data Flow</a>
-          <a href="#">Spring Data</a>
-          <a href="#">Spring Integration</a>
-          <a href="#">Spring Batch</a>
-          <a href="#">Spring Security</a>
-          <a href="#" id="blue">View all projects</a>
-          <span class="projects__text__tools">Development tools</span>
-          <a href="#">Spring Tools4</a>
-          <a href="#">Spring Initializr</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <span class="dropdown__button">Academy</span>
-        <div class="dropdown__content">
-          <a href="#">Courses</a>
-          <a href="#">Get Certified</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <span class="dropdown__button">Support</span>
-        <div class="dropdown__content">
-          <a href="#">Overview</a>
-          <a href="#">Security Advisories</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <span class="dropdown__button">Community</span>
-        <div class="dropdown__content">
-          <a href="#">Overview</a>
-          <a href="#">Events</a>
-          <a href="#">Team</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <nav id="burger">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </nav>
+    </nav>
+  </div>
 </header>
 <section id="projects">
-  <div class="container">
+  <div class="projects__container">
     <div class="projects__header">
       <h1>Projects</h1>
       <div class="description">
