@@ -93,6 +93,8 @@ html, body {
     padding: 16px;
     min-width: 160px;
     box-shadow: 0 7px 10px 7px rgba(108, 135, 135, 0.24);
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
 .dropdown:hover .dropdown__content {
@@ -290,6 +292,10 @@ html, body {
         width: 690px;
     }
 
+    .dropdown:hover .dropdown__content {
+        display: block;
+    }
+
     .projects__header {
         max-width: 80%;
         min-width: 0;
@@ -377,6 +383,7 @@ html, body {
         padding: 16px 16px 5px 0;
         box-shadow: none;
         margin-left: 8%;
+        margin-top: 0;
     }
 
     .dropdown__content a {
