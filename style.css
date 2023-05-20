@@ -292,10 +292,6 @@ html, body {
         width: 690px;
     }
 
-    .dropdown:hover .dropdown__content {
-        display: block;
-    }
-
     .projects__header {
         max-width: 80%;
         min-width: 0;

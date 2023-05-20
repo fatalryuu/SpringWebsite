@@ -5,8 +5,10 @@ const checkbox = document.querySelector('#burger');
 
 const resizeListener = () => {
     if (window.innerWidth >= 900) {
-        checkbox.checked = false;
-        divs.forEach(div => div.style.display = 'none');
+        if (checkbox.checked) {
+            checkbox.checked = false;
+            divs.forEach(div => div.style.display = 'none');
+        }
     }
 }
 
