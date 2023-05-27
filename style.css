@@ -260,6 +260,10 @@ html, body {
     transition: ease 0.2s;
 }
 
+.hidden {
+    display: none;
+}
+
 .projects__table a {
     border: 1px solid #d8f1ff;
     border-radius: 5px;

@@ -1,3 +1,6 @@
+const projectTemplate = document.querySelector(".project__template");
+const projectsWrapper = document.querySelector(".projects__table");
+
 let projects = [
     {
         id: 1,
@@ -161,9 +164,6 @@ function loadDropdowns() {
     }
 }
 
-const projectTemplate = document.querySelector(".project__template");
-const projectsWrapper = document.querySelector(".projects__table");
-
 function loadProjects() {
     projects = projects.map(project => {
         const card = projectTemplate.content.cloneNode(true).children[0];
@@ -242,8 +242,28 @@ window.addEventListener('scroll', () => {
 });
 
 const search = document.querySelector("#search");
+const noResultsMessage = document.querySelector("#no-results");
+let timeoutId;
 
-search.addEventListener("input", (e) => {
-    const value = e.target.value;
-    console.log(value)
+search.addEventListener('input', (e) => {
+    clearTimeout(timeoutId);
+
+    timeoutId = setTimeout(() => {
+        const value = e.target.value.toLowerCase();
+        let hasResults = false;
+
+        projects.forEach(project => {
+            const isVisible = project.title.toLowerCase().includes(value) || project.text.toLowerCase().includes(value);
+            project.card.classList.toggle("hidden", !isVisible);
+            if (isVisible) {
+                hasResults = true;
+            }
+        });
+
+        if (hasResults) {
+            noResultsMessage.style.display = "none";
+        } else {
+            noResultsMessage.style.display = "block";
+        }
+    }, 300);
 })
