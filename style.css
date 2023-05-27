@@ -188,12 +188,11 @@ html, body {
 /*projects section*/
 
 #projects {
-    height: 100vh;
-    min-height: 100%;
+
 }
 
 .projects__container {
-    min-height: 100%;
+
 }
 
 .projects__header {
@@ -220,7 +219,7 @@ html, body {
 
 .projects__list {
     background-color: #ebf2f2;
-    height: 100%;
+    min-height: 56.7vh;
     padding-top: 20px;
     margin-top: 48px;
 }
