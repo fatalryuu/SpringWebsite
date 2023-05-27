@@ -1,0 +1,23 @@
+{
+  "name": "stage-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatalryuu/Stage2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fatalryuu/Stage2/issues"
+  },
+  "homepage": "https://github.com/fatalryuu/Stage2#readme",
+  "devDependencies": {
+    "eslint": "^8.41.0"
+  }
+}
