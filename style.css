@@ -232,6 +232,24 @@ html, body {
 
 #search {
     outline: none;
+    padding: 7px 10px 7px 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 300px;
+}
+
+#search::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    background: url("img/cross.png") no-repeat center;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+#no-results {
+    text-align: center;
+    font-size: 2rem;
 }
 
 .projects__table {
@@ -487,6 +505,9 @@ html, body {
 @media screen and (max-width: 575px) {
     #icon {
         margin-left: 10px;
+    }
+    #search {
+        width: 200px;
     }
 }
 
