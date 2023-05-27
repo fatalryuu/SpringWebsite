@@ -221,8 +221,17 @@ html, body {
 .projects__list {
     background-color: #ebf2f2;
     height: 100%;
-    padding-top: 48px;
+    padding-top: 20px;
     margin-top: 48px;
+}
+
+.search__wrapper {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#search {
+    outline: none;
 }
 
 .projects__table {

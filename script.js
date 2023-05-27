@@ -1,36 +1,42 @@
-const projects = [
+let projects = [
     {
         id: 1,
+        card: null,
         imgURL: "img/spring-boot.svg",
         title: "Spring Boot",
         text: "Takes an opinionated view of building Spring applications and gets you up and running as quickly as possible."
     },
     {
         id: 2,
+        card: null,
         imgURL: "img/spring-framework.svg",
         title: "Spring Framework",
         text: "Provides core support for dependency injection, transaction management, web apps, data access, messaging, and more."
     },
     {
         id: 3,
+        card: null,
         imgURL: "img/spring-data.svg",
         title: "Spring Data",
         text: "Provides a consistent approach to data access – relational, non-relational, map-reduce, and beyond."
     },
     {
         id: 4,
+        card: null,
         imgURL: "img/spring-cloud.svg",
         title: "Spring Cloud",
         text: "Provides a set of tools for common patterns in distributed systems. Useful for building and deploying microservices."
     },
     {
         id: 5,
+        card: null,
         imgURL: "img/spring-data-flow.svg",
         title: "Spring Cloud Data Flow",
         text: "Provides an orchestration service for composable data microservice applications on modern runtimes."
     },
     {
         id: 6,
+        card: null,
         imgURL: "img/spring-security.svg",
         title: "Spring Security",
         text: "Protects your application with comprehensive and extensible authentication and authorization support."
@@ -155,39 +161,25 @@ function loadDropdowns() {
     }
 }
 
+const projectTemplate = document.querySelector(".project__template");
+const projectsWrapper = document.querySelector(".projects__table");
+
 function loadProjects() {
-    const wrapper = document.querySelector(".projects__table");
+    projects = projects.map(project => {
+        const card = projectTemplate.content.cloneNode(true).children[0];
 
-    for (let i = 0; i < projects.length; i++) {
-        const project = projects[i];
+        const image = card.querySelector(".project__icon");
+        const header = card.querySelector(".project__header");
+        const description = card.querySelector(".project__description");
 
-        const article = document.createElement("article");
-
-        const link = document.createElement("a");
-        link.href = "#";
-
-        const image = document.createElement("img");
         image.src = project.imgURL;
-        image.alt = "";
-        image.classList.add("project__icon");
+        header.textContent = project.title;
+        description.textContent = project.text;
 
-        const textDiv = document.createElement("div");
-        textDiv.classList.add("project__text");
+        projectsWrapper.append(card);
 
-        const title = document.createElement("h2");
-        title.textContent = project.title;
-
-        const text = document.createElement("p");
-        text.textContent = project.text;
-
-        textDiv.appendChild(title);
-        textDiv.appendChild(text);
-        link.appendChild(image);
-        link.appendChild(textDiv);
-        article.appendChild(link);
-
-        wrapper.appendChild(article);
-    }
+        return {...project, card: card};
+    });
 }
 
 loadDropdowns();
@@ -248,3 +240,10 @@ window.addEventListener('scroll', () => {
         scrollbar.classList.remove('show-scrollbar');
     }
 });
+
+const search = document.querySelector("#search");
+
+search.addEventListener("input", (e) => {
+    const value = e.target.value;
+    console.log(value)
+})
