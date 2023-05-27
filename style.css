@@ -331,6 +331,10 @@ html, body {
         font-size: 2.5rem;
     }
 
+    .projects__list {
+        min-height: 60.9vh;
+    }
+
     .description {
         font-size: 1.2rem;
         line-height: 1.8rem;
@@ -357,6 +361,10 @@ html, body {
 }
 
 @media screen and (max-width: 900px) {
+    body {
+        height: auto;
+    }
+
     #header {
         position: fixed;
         top: 0;
@@ -432,6 +440,10 @@ html, body {
         color: #98afae;
     }
 
+    .projects__list {
+        min-height: 67vh;
+    }
+
     .dropdown__button {
         color: white;
         font-size: 2rem;
@@ -471,6 +483,10 @@ html, body {
         width: 47%;
         padding: 10px;
     }
+
+    .projects__list {
+        min-height: 64vh;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -499,6 +515,10 @@ html, body {
 
     .description {
         width: 100%;
+    }
+
+    .projects__list {
+        min-height: 66.1vh;
     }
 }
 
