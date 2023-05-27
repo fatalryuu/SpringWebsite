@@ -1,4 +1,3 @@
-const dropdowns = document.querySelectorAll(".dropdown");
 const buttons = document.querySelectorAll(".dropdown__button");
 const divs = document.querySelectorAll(".dropdown__content");
 const checkbox = document.querySelector('#burger');
@@ -54,3 +53,81 @@ window.addEventListener('scroll', () => {
         scrollbar.classList.remove('show-scrollbar');
     }
 });
+
+// loaders
+
+const projects = [
+    {
+        id: 1,
+        imgURL: "img/spring-boot.svg",
+        title: "Spring Boot",
+        text: "Takes an opinionated view of building Spring applications and gets you up and running as quickly as possible."
+    },
+    {
+        id: 2,
+        imgURL: "img/spring-framework.svg",
+        title: "Spring Framework",
+        text: "Provides core support for dependency injection, transaction management, web apps, data access, messaging, and more."
+    },
+    {
+        id: 3,
+        imgURL: "img/spring-data.svg",
+        title: "Spring Data",
+        text: "Provides a consistent approach to data access – relational, non-relational, map-reduce, and beyond."
+    },
+    {
+        id: 4,
+        imgURL: "img/spring-cloud.svg",
+        title: "Spring Cloud",
+        text: "Provides a set of tools for common patterns in distributed systems. Useful for building and deploying microservices."
+    },
+    {
+        id: 5,
+        imgURL: "img/spring-data-flow.svg",
+        title: "Spring Cloud Data Flow",
+        text: "Provides an orchestration service for composable data microservice applications on modern runtimes."
+    },
+    {
+        id: 6,
+        imgURL: "img/spring-security.svg",
+        title: "Spring Security",
+        text: "Protects your application with comprehensive and extensible authentication and authorization support."
+    },
+]
+
+const loadProjects = () => {
+    const wrapper = document.querySelector(".projects__table");
+
+    for (let i = 0; i < projects.length; i++) {
+        const project = projects[i];
+
+        const article = document.createElement("article");
+
+        const link = document.createElement("a");
+        link.href = "#";
+
+        const image = document.createElement("img");
+        image.src = project.imgURL;
+        image.alt = "";
+        image.classList.add("project__icon");
+
+        const textDiv = document.createElement("div");
+        textDiv.classList.add("project__text");
+
+        const title = document.createElement("h2");
+        title.textContent = project.title;
+
+        const text = document.createElement("p");
+        text.textContent = project.text;
+
+        textDiv.appendChild(title);
+        textDiv.appendChild(text);
+        link.appendChild(image);
+        link.appendChild(textDiv);
+        article.appendChild(link);
+
+        wrapper.appendChild(article);
+    }
+}
+
+loadProjects();
